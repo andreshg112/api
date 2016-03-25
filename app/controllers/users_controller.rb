@@ -1,5 +1,6 @@
 class Api::UsersController < ApplicationController
-	protect_from_forgery :only => [:create, :update, :destroy]
+	#Solucionar (para esta clase) el error: ActionController::InvalidAuthenticityToken
+	#protect_from_forgery :only => [:create, :update, :destroy]
 	
 	def index
 		@users = User.all

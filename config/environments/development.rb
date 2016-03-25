@@ -1,9 +1,21 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #Intento 1 de solución al error de reiniciar el servidor por cada cambio.
+  #config.reload_classes_only_on_change = true
+  #config.reload_classes = true
+  
+  #Intento 2 de solución al error de reiniciar el servidor por cada cambio.
+  #config.serve_static_assets = false
+  #Intento 2.1
+  #config.serve_static_files = false
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  
+  #Intento 3... (no sirve, en lo absoluto)
+  #config.threadsafe!
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -38,4 +50,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
 end
